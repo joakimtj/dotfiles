@@ -1,0 +1,5 @@
+require("joakim.options")
+require("joakim.keymap")
+require("joakim.lazy")
+vim.cmd("colorscheme nightfox")
+print("Hello from Joakim")
