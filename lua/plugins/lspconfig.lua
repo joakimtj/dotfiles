@@ -27,6 +27,7 @@ return {
                 }
             })
             require('lspconfig').clangd.setup{}
+            require('lspconfig').texlab.setup{}
         end
     }
 }
