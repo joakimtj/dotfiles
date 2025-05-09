@@ -6,5 +6,8 @@ vim.o.ruler = true -- Show the line and col number of the cursor position, separ
 vim.o.relativenumber = true -- Enable relative line numbers
 vim.opt.signcolumn = "number" -- Does something when also displaying line number(s)
 vim.opt.number = true
+vim.opt.scrolloff = 4  -- Keep 4 lines above/below cursor when scrolling
+
+vim.opt.swapfile = false -- disables the swapfile
 
 vim.opt.mouse = nv
