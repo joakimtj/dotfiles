@@ -3,7 +3,8 @@ return {
     tag = '0.1.8',
     dependencies = {
         'nvim-lua/plenary.nvim',
-        { 'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release' }
+        { 'nvim-telescope/telescope-fzf-native.nvim', build = have_make and "make"
+          or "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build", }
     },
     config = function()
         vim.keymap.set("n", "<space>ff", require('telescope.builtin').find_files)
